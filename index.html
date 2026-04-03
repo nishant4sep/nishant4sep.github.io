@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Nishant Padha | Designer & Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0a0e17;
+  --bg2:#0f1420;
+  --card:#111827;
+  --border:#1e2a3a;
+  --border2:#253347;
+  --text:#cdd9e5;
+  --text2:#8b949e;
+  --text3:#6e7681;
+  --green:#3fb950;
+  --blue:#58a6ff;
+  --purple:#bc8cff;
+  --orange:#d29922;
+  --red:#f85149;
+  --accent:#58a6ff;
+  --mono:'Fira Code',monospace;
+  --sans:'Inter',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);overflow-x:hidden;line-height:1.6}
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
+
+.layout{display:flex;min-height:100vh}
+
+/* SIDEBAR */
+.sidebar{
+  width:280px;min-width:280px;
+  padding:2.5rem 1.75rem;
+  border-right:1px solid var(--border);
+  position:sticky;top:0;height:100vh;overflow-y:auto;
+  display:flex;flex-direction:column;gap:1.75rem;
+}
+.sidebar-avatar{width:72px;height:72px;border-radius:50%;border:2px solid var(--border2);overflow:hidden}
+.sidebar-avatar img{width:100%;height:100%;object-fit:cover}
+.sidebar-name{font-size:1.15rem;font-weight:600;color:#e6edf3;margin-bottom:.15rem}
+.sidebar-handle{font-size:.75rem;color:var(--blue);font-family:var(--mono);margin-bottom:.5rem}
+.sidebar-bio{font-size:.8rem;color:var(--text2);line-height:1.6}
+.stat-row{display:flex;align-items:center;gap:.5rem;margin-top:.5rem;font-family:var(--mono);font-size:.72rem;color:var(--text3)}
+.stat-dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 5px var(--green);flex-shrink:0}
+nav ul{list-style:none;display:flex;flex-direction:column;gap:.2rem}
+nav a{display:flex;align-items:center;gap:.7rem;padding:.45rem .7rem;border-radius:6px;font-size:.8rem;color:var(--text2);text-decoration:none;transition:all .2s}
+nav a:hover,nav a.active{background:var(--border);color:var(--text)}
+nav a .ni{font-size:.85rem;width:16px;text-align:center;flex-shrink:0}
+.sidebar-social{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:auto}
+.soc{display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:6px;border:1px solid var(--border2);color:var(--text2);text-decoration:none;font-size:.7rem;font-family:var(--mono);transition:all .2s}
+.soc:hover{border-color:var(--blue);color:var(--blue)}
+.sidebar-copy{font-size:.67rem;color:var(--text3);font-family:var(--mono)}
+
+/* MAIN */
+main{flex:1;padding:2.5rem 2.5rem;max-width:860px}
+section{padding:0 0 4rem;opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease}
+section.visible{opacity:1;transform:translateY(0)}
+.stitle{display:flex;align-items:center;gap:.6rem;font-size:.7rem;font-family:var(--mono);color:var(--text3);text-transform:uppercase;letter-spacing:.12em;margin-bottom:1.75rem;padding-bottom:.7rem;border-bottom:1px solid var(--border)}
+.stitle::before{content:attr(data-i);font-size:.95rem}
+
+/* HOME */
+#home{padding-top:1.5rem}
+.typing-row{font-family:var(--mono);font-size:.82rem;color:var(--text2);margin-bottom:.6rem}
+.prefix{color:var(--text3)}
+.typed{color:var(--green)}
+.cur{color:var(--blue);animation:bl .7s infinite}
+@keyframes bl{0%,100%{opacity:1}50%{opacity:0}}
+.hero-name{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:600;color:#e6edf3;margin-bottom:.4rem;line-height:1.1}
+.hero-name span{color:var(--blue)}
+.hero-sub{font-size:.9rem;color:var(--text2);margin-bottom:1.5rem;max-width:480px}
+.hero-sub strong{color:var(--text)}
+.hero-btns{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:2rem}
+.btn{padding:.5rem 1.1rem;border-radius:6px;font-size:.77rem;font-family:var(--mono);text-decoration:none;cursor:pointer;transition:all .2s;border:1px solid;display:inline-flex;align-items:center;gap:.35rem}
+.btn-p{background:var(--blue);border-color:var(--blue);color:#0d1117}
+.btn-p:hover{background:#79b8ff;border-color:#79b8ff}
+.btn-g{background:transparent;border-color:var(--border2);color:var(--text2)}
+.btn-g:hover{border-color:var(--blue);color:var(--blue)}
+
+/* terminal */
+.term{background:var(--card);border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.term-bar{background:#1c2333;padding:.45rem .7rem;display:flex;align-items:center;gap:.35rem;border-bottom:1px solid var(--border)}
+.td{width:10px;height:10px;border-radius:50%}
+.tr{background:#ff5f57}.ty{background:#febc2e}.tg{background:#28c840}
+.term-title{font-family:var(--mono);font-size:.67rem;color:var(--text3);margin-left:.4rem}
+.term-body{padding:.9rem 1.1rem;font-family:var(--mono);font-size:.76rem;line-height:1.9}
+.tc{color:var(--text3)}.tk{color:var(--purple)}.tv{color:var(--green)}.ts{color:var(--orange)}.tn{color:var(--blue)}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+.ac{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:1.1rem}
+.ac h4{font-size:.68rem;font-family:var(--mono);color:var(--text3);margin-bottom:.7rem;text-transform:uppercase;letter-spacing:.1em}
+.ac p{font-size:.82rem;color:var(--text2);line-height:1.8}
+.ac.full{grid-column:1/-1}
+.skills{display:flex;flex-wrap:wrap;gap:.35rem}
+.sk{padding:.25rem .6rem;border-radius:4px;font-size:.7rem;font-family:var(--mono);background:rgba(88,166,255,.08);border:1px solid rgba(88,166,255,.2);color:var(--blue);transition:background .2s;cursor:default}
+.sk:hover{background:rgba(88,166,255,.15)}
+.sk.g{background:rgba(63,185,80,.08);border-color:rgba(63,185,80,.2);color:var(--green)}
+.sk.p{background:rgba(188,140,255,.08);border-color:rgba(188,140,255,.2);color:var(--purple)}
+.sk.o{background:rgba(210,153,34,.08);border-color:rgba(210,153,34,.2);color:var(--orange)}
+
+/* EXPERIENCE */
+.ei{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:1.1rem;margin-bottom:.9rem;transition:border-color .2s}
+.ei:hover{border-color:var(--border2)}
+.ei-head{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;margin-bottom:.35rem}
+.ei-role{font-size:.9rem;font-weight:600;color:#e6edf3}
+.ei-per{font-family:var(--mono);font-size:.67rem;color:var(--text3);white-space:nowrap;padding-top:.15rem}
+.ei-co{font-size:.76rem;color:var(--blue);font-family:var(--mono);margin-bottom:.65rem}
+.ei-desc{font-size:.8rem;color:var(--text2);line-height:1.7}
+.ei-tags{display:flex;gap:.35rem;flex-wrap:wrap;margin-top:.65rem}
+.et{padding:.18rem .5rem;border-radius:3px;font-size:.65rem;font-family:var(--mono);background:var(--border);color:var(--text3)}
+
+/* PROJECTS */
+.ptabs{display:flex;gap:.2rem;margin-bottom:1.25rem;flex-wrap:wrap}
+.tab{padding:.35rem .8rem;border-radius:6px;font-size:.72rem;font-family:var(--mono);background:none;border:1px solid var(--border);color:var(--text3);cursor:pointer;transition:all .2s}
+.tab:hover,.tab.active{background:var(--border);color:var(--text);border-color:var(--border2)}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(265px,1fr));gap:.9rem}
+.pc{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:1.1rem;display:flex;flex-direction:column;gap:.65rem;transition:all .2s}
+.pc:hover{border-color:var(--border2);transform:translateY(-2px)}
+.pc.h{display:none}
+.pc-head{display:flex;align-items:center;justify-content:space-between}
+.pc-icon{font-size:1.1rem}
+.pc-links{display:flex;gap:.35rem}
+.pcl{font-size:.65rem;font-family:var(--mono);color:var(--text3);text-decoration:none;transition:color .2s}
+.pcl:hover{color:var(--blue)}
+.pc-name{font-size:.87rem;font-weight:600;color:#e6edf3}
+.pc-desc{font-size:.76rem;color:var(--text2);line-height:1.6;flex:1}
+.pc-foot{display:flex;align-items:center;gap:.9rem;padding-top:.5rem;border-top:1px solid var(--border)}
+.pc-lang{display:flex;align-items:center;gap:.3rem;font-size:.68rem;font-family:var(--mono);color:var(--text3)}
+.ld{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.pc-st{font-size:.68rem;font-family:var(--mono);color:var(--text3);margin-left:auto}
+.pload{grid-column:1/-1;text-align:center;padding:2.5rem;font-family:var(--mono);font-size:.76rem;color:var(--text3)}
+.syncbar{display:flex;align-items:center;gap:.5rem;justify-content:flex-end;font-family:var(--mono);font-size:.65rem;color:var(--text3);margin-top:.65rem}
+.spulse{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.8)}}
+
+/* CONTACT */
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+.cc{display:flex;align-items:center;gap:.9rem;padding:.9rem;background:var(--card);border:1px solid var(--border);border-radius:8px;text-decoration:none;transition:all .2s}
+.cc:hover{border-color:var(--blue);transform:translateY(-2px)}
+.cc-icon{width:36px;height:36px;border-radius:6px;background:var(--border);display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0;font-family:var(--mono)}
+.cc-label{font-size:.65rem;color:var(--text3);font-family:var(--mono);margin-bottom:.1rem}
+.cc-val{font-size:.8rem;color:var(--text);font-weight:500}
+.cc-arr{margin-left:auto;color:var(--text3);font-size:.85rem;transition:all .2s}
+.cc:hover .cc-arr{color:var(--blue);transform:translate(2px,-2px)}
+
+@media(max-width:780px){
+  .layout{flex-direction:column}
+  .sidebar{width:100%;min-width:unset;height:auto;position:static;border-right:none;border-bottom:1px solid var(--border);padding:1.25rem}
+  .sidebar-social{margin-top:0}
+  .stat-row,.sidebar-copy{display:none}
+  main{padding:1.25rem}
+  .about-grid,.cgrid{grid-template-columns:1fr}
+  .ac.full{grid-column:1}
+  nav ul{flex-direction:row;flex-wrap:wrap}
+}
+</style>
+</head>
+<body>
+<div class="layout">
+
+<aside class="sidebar">
+  <div class="sidebar-avatar">
+    <img src="https://avatars.githubusercontent.com/nishant4sep?v=4"
+         onerror="this.src='https://ui-avatars.com/api/?name=NP&size=80&background=1c2333&color=58a6ff&bold=true'"
+         alt="Nishant Padha"/>
+  </div>
+  <div>
+    <div class="sidebar-name">Nishant Padha</div>
+    <div class="sidebar-handle">@nishant4sep</div>
+    <p class="sidebar-bio">Designer × Developer × Visual storyteller.</p>
+    <div class="stat-row"><span class="stat-dot"></span> Open to work</div>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#home" class="active"><span class="ni">⌂</span>Home</a></li>
+      <li><a href="#about"><span class="ni">◉</span>About</a></li>
+      <li><a href="#experience"><span class="ni">◈</span>Experience</a></li>
+      <li><a href="#projects"><span class="ni">⬡</span>Projects</a></li>
+      <li><a href="#contact"><span class="ni">◎</span>Contact</a></li>
+    </ul>
+  </nav>
+  <div class="sidebar-social">
+    <a class="soc" href="https://github.com/nishant4sep" target="_blank">GH</a>
+    <a class="soc" href="https://www.linkedin.com/in/nishantpadha/" target="_blank">in</a>
+    <a class="soc" href="https://behance.com/nishantpadha" target="_blank">Bē</a>
+    <a class="soc" href="https://www.instagram.com/nishantpadha/" target="_blank">ig</a>
+  </div>
+  <div class="sidebar-copy">© 2025 Nishant Padha</div>
+</aside>
+
+<main>
+
+<section id="home">
+  <div class="typing-row"><span class="prefix">$ </span><span class="typed" id="typed"></span><span class="cur">▌</span></div>
+  <h1 class="hero-name">Hi, I'm <span>Nishant Padha</span></h1>
+  <p class="hero-sub">A <strong>UI/UX Designer & Developer</strong> crafting seamless digital experiences — from concept to code.</p>
+  <div class="hero-btns">
+    <a href="#projects" class="btn btn-p">⬡ View Projects</a>
+    <a href="https://github.com/nishant4sep" target="_blank" class="btn btn-g">GH GitHub</a>
+    <a href="https://behance.com/nishantpadha" target="_blank" class="btn btn-g">Bē Behance</a>
+  </div>
+  <div class="term">
+    <div class="term-bar">
+      <div class="td tr"></div><div class="td ty"></div><div class="td tg"></div>
+      <span class="term-title">nishant@portfolio ~ whoami</span>
+    </div>
+    <div class="term-body">
+      <div><span class="tc">// quick intro</span></div>
+      <div><span class="tk">const</span> nishant = {</div>
+      <div>&nbsp;&nbsp;<span class="tk">name</span>:&nbsp;&nbsp;&nbsp;<span class="ts">"Nishant Padha"</span>,</div>
+      <div>&nbsp;&nbsp;<span class="tk">role</span>:&nbsp;&nbsp;&nbsp;<span class="ts">"Designer &amp; Developer"</span>,</div>
+      <div>&nbsp;&nbsp;<span class="tk">stack</span>:&nbsp;&nbsp;[<span class="ts">"Figma"</span>, <span class="ts">"React"</span>, <span class="ts">"Node.js"</span>, <span class="ts">"Python"</span>],</div>
+      <div>&nbsp;&nbsp;<span class="tk">openTo</span>:&nbsp;<span class="tv">true</span>,</div>
+      <div>&nbsp;&nbsp;<span class="tk">github</span>:&nbsp;<span class="ts">"github.com/nishant4sep"</span></div>
+      <div>};</div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="stitle" data-i="◉">About Me</div>
+  <div class="about-grid">
+    <div class="ac full">
+      <h4>Bio</h4>
+      <p>I'm a designer and developer with a strong eye for aesthetics and a passion for building things that work beautifully. I operate at the intersection of design and engineering — comfortable in Figma as I am writing production code.<br/><br/>Beyond the screen, I'm a visual storyteller — my photography and creative work on Behance and Instagram feed directly back into how I think about interfaces, layouts, and user experience.</p>
+    </div>
+    <div class="ac">
+      <h4>Design</h4>
+      <div class="skills">
+        <span class="sk p">UI/UX Design</span><span class="sk p">Figma</span>
+        <span class="sk p">Prototyping</span><span class="sk p">Wireframing</span>
+        <span class="sk p">Branding</span><span class="sk p">Motion</span>
+        <span class="sk p">Art Direction</span><span class="sk p">Photography</span>
+      </div>
+    </div>
+    <div class="ac">
+      <h4>Development</h4>
+      <div class="skills">
+        <span class="sk">React</span><span class="sk">JavaScript</span>
+        <span class="sk">TypeScript</span><span class="sk">HTML/CSS</span>
+        <span class="sk g">Node.js</span><span class="sk g">Python</span>
+        <span class="sk g">REST APIs</span><span class="sk o">Git</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="stitle" data-i="◈">Experience &amp; Education</div>
+  <div class="ei">
+    <div class="ei-head">
+      <div><div class="ei-role">UI/UX Designer & Front-End Developer</div><div class="ei-co">Freelance · Remote</div></div>
+      <div class="ei-per">2023 – Present</div>
+    </div>
+    <p class="ei-desc">Designing and developing web products end-to-end — from user research and wireframes to production code. Building personal projects and an open creative portfolio.</p>
+    <div class="ei-tags"><span class="et">Figma</span><span class="et">React</span><span class="et">Node.js</span><span class="et">UI/UX</span><span class="et">Branding</span></div>
+  </div>
+  <div class="ei">
+    <div class="ei-head">
+      <div><div class="ei-role">B.Tech — Computer Science & Engineering</div><div class="ei-co">Undergraduate Degree</div></div>
+      <div class="ei-per">2021 – 2025</div>
+    </div>
+    <p class="ei-desc">Core CS foundations — data structures, algorithms, software engineering, OS, and networks. Explored design and frontend development alongside formal curriculum.</p>
+    <div class="ei-tags"><span class="et">DSA</span><span class="et">Software Eng.</span><span class="et">Python</span><span class="et">C/C++</span><span class="et">Databases</span></div>
+  </div>
+  <div class="ei">
+    <div class="ei-head">
+      <div><div class="ei-role">Visual Creator</div><div class="ei-co">Behance · Instagram · Photography</div></div>
+      <div class="ei-per">Ongoing</div>
+    </div>
+    <p class="ei-desc">Capturing and creating visual stories through photography and digital design. A creative portfolio that directly informs interface and product design work.</p>
+    <div class="ei-tags"><span class="et">Photography</span><span class="et">Art Direction</span><span class="et">Behance</span><span class="et">Content</span></div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="stitle" data-i="⬡">Projects</div>
+  <div class="ptabs">
+    <button class="tab active" data-f="all">All</button>
+    <button class="tab" data-f="JavaScript">JavaScript</button>
+    <button class="tab" data-f="Python">Python</button>
+    <button class="tab" data-f="HTML">HTML/CSS</button>
+    <button class="tab" data-f="TypeScript">TypeScript</button>
+    <button class="tab" data-f="other">Other</button>
+  </div>
+  <div class="pgrid" id="pgrid">
+    <div class="pload" id="pload">Fetching repos from GitHub<span id="ldots"></span></div>
+  </div>
+  <div class="syncbar" id="sbar" style="display:none">
+    <span class="spulse"></span><span id="stxt"></span>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="stitle" data-i="◎">Contact</div>
+  <p style="font-size:.82rem;color:var(--text2);margin-bottom:1.25rem;max-width:440px">Open to freelance work, full-time roles, and interesting collaborations.</p>
+  <div class="cgrid">
+    <a href="https://www.linkedin.com/in/nishantpadha/" target="_blank" class="cc">
+      <div class="cc-icon">in</div>
+      <div><div class="cc-label">LinkedIn</div><div class="cc-val">nishantpadha</div></div>
+      <span class="cc-arr">↗</span>
+    </a>
+    <a href="https://github.com/nishant4sep" target="_blank" class="cc">
+      <div class="cc-icon">GH</div>
+      <div><div class="cc-label">GitHub</div><div class="cc-val">nishant4sep</div></div>
+      <span class="cc-arr">↗</span>
+    </a>
+    <a href="https://behance.com/nishantpadha" target="_blank" class="cc">
+      <div class="cc-icon" style="font-family:serif;font-size:.95rem">Bē</div>
+      <div><div class="cc-label">Behance</div><div class="cc-val">nishantpadha</div></div>
+      <span class="cc-arr">↗</span>
+    </a>
+    <a href="https://www.instagram.com/nishantpadha/" target="_blank" class="cc">
+      <div class="cc-icon">ig</div>
+      <div><div class="cc-label">Instagram</div><div class="cc-val">@nishantpadha</div></div>
+      <span class="cc-arr">↗</span>
+    </a>
+  </div>
+</section>
+
+</main>
+</div>
+
+<script>
+// typing
+const phrases=['designer.','developer.','creator.','nishant.'];
+let pi=0,ci=0,del=false;
+const tel=document.getElementById('typed');
+function type(){
+  const w=phrases[pi];
+  if(!del){tel.textContent=w.slice(0,++ci);if(ci===w.length){del=true;return setTimeout(type,1800);}}
+  else{tel.textContent=w.slice(0,--ci);if(ci===0){del=false;pi=(pi+1)%phrases.length;}}
+  setTimeout(type,del?60:100);
+}
+type();
+
+// dots
+let dc=0;
+setInterval(()=>{document.getElementById('ldots').textContent=['.','..','...'][dc++%3];},500);
+
+// IO reveal
+const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:.04});
+document.querySelectorAll('section').forEach(s=>io.observe(s));
+
+// active nav
+const secs=document.querySelectorAll('section');
+const navAs=document.querySelectorAll('nav a');
+window.addEventListener('scroll',()=>{
+  let cur='';
+  secs.forEach(s=>{if(window.scrollY>=s.offsetTop-180)cur=s.id;});
+  navAs.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+cur));
+},{passive:true});
+
+// GitHub
+const COLORS={JavaScript:'#f1e05a',TypeScript:'#3178c6',Python:'#3572A5',HTML:'#e34c26',CSS:'#563d7c',Vue:'#41b883','C++':'#f34b7d',Java:'#b07219',Rust:'#dea584',Go:'#00ADD8',Shell:'#89e051','Jupyter Notebook':'#DA5B0B',C:'#555555',Ruby:'#701516'};
+
+async function loadGH(){
+  try{
+    const r=await fetch('https://api.github.com/users/nishant4sep/repos?sort=updated&per_page=20&type=public');
+    if(!r.ok)throw 0;
+    const repos=await r.json();
+    renderRepos(repos);
+  }catch{
+    document.getElementById('pload').innerHTML='Could not load repos. <a href="https://github.com/nishant4sep" target="_blank" style="color:var(--blue)">View on GitHub ↗</a>';
+  }
+}
+
+function renderRepos(repos){
+  const grid=document.getElementById('pgrid');
+  const filtered=repos.filter(r=>!r.fork);
+  document.getElementById('pload').remove();
+  if(!filtered.length){grid.innerHTML='<div class="pload">No public repos yet. <a href="https://github.com/nishant4sep" target="_blank" style="color:var(--blue)">Follow ↗</a></div>';return;}
+  filtered.forEach((r,i)=>{
+    const lang=r.language||'';
+    const col=COLORS[lang]||'#8b949e';
+    const c=document.createElement('div');
+    c.className='pc';c.dataset.lang=lang;
+    c.innerHTML=`
+      <div class="pc-head"><span class="pc-icon">⬡</span>
+        <div class="pc-links">
+          <a href="${r.html_url}" target="_blank" class="pcl">Code ↗</a>
+          ${r.homepage?`<a href="${r.homepage}" target="_blank" class="pcl">Live ↗</a>`:''}
+        </div>
+      </div>
+      <div class="pc-name">${r.name}</div>
+      <div class="pc-desc">${r.description||'A project by Nishant Padha.'}</div>
+      <div class="pc-foot">
+        ${lang?`<span class="pc-lang"><span class="ld" style="background:${col}"></span>${lang}</span>`:''}
+        <span class="pc-st">★ ${r.stargazers_count}</span>
+      </div>`;
+    grid.appendChild(c);
+  });
+  document.getElementById('sbar').style.display='flex';
+  document.getElementById('stxt').textContent=`Synced · ${filtered.length} repos · github.com/nishant4sep`;
+}
+loadGH();
+
+// filter
+const main4=['JavaScript','Python','HTML','TypeScript'];
+document.querySelectorAll('.tab').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const f=btn.dataset.f;
+    document.querySelectorAll('.pc').forEach(c=>{
+      const l=c.dataset.lang;
+      const show=f==='all'||(f==='other'?!main4.includes(l):(f==='HTML'?l==='HTML'||l==='CSS':l===f));
+      c.classList.toggle('h',!show);
+    });
+  });
+});
+</script>
+</body>
+</html>
