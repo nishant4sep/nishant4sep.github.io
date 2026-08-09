@@ -139,6 +139,7 @@ section.visible{opacity:1;transform:translateY(0)}
 .syncbar{display:flex;align-items:center;gap:.5rem;justify-content:flex-end;font-family:var(--mono);font-size:.65rem;color:var(--text3);margin-top:.65rem}
 .spulse{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.8)}}
+.pc-badge{font-size:.63rem;font-family:var(--mono);color:var(--text3);padding:.1rem .4rem;border:1px solid var(--border2);border-radius:3px}
 
 /* CONTACT */
 .cgrid{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
@@ -174,7 +175,7 @@ section.visible{opacity:1;transform:translateY(0)}
   <div>
     <div class="sidebar-name">Nishant Padha</div>
     <div class="sidebar-handle">@nishant4sep</div>
-    <p class="sidebar-bio">Designer × Developer × Visual storyteller.</p>
+    <p class="sidebar-bio">Full-stack developer · Founder, NYX Digital.</p>
     <div class="stat-row"><span class="stat-dot"></span> Open to work</div>
   </div>
   <nav>
@@ -192,7 +193,7 @@ section.visible{opacity:1;transform:translateY(0)}
     <a class="soc" href="https://behance.com/nishantpadha" target="_blank">Bē</a>
     <a class="soc" href="https://www.instagram.com/nishantpadha/" target="_blank">ig</a>
   </div>
-  <div class="sidebar-copy">© 2025 Nishant Padha</div>
+  <div class="sidebar-copy">© 2026 Nishant Padha</div>
 </aside>
 
 <main>
@@ -200,11 +201,11 @@ section.visible{opacity:1;transform:translateY(0)}
 <section id="home">
   <div class="typing-row"><span class="prefix">$ </span><span class="typed" id="typed"></span><span class="cur">▌</span></div>
   <h1 class="hero-name">Hi, I'm <span>Nishant Padha</span></h1>
-  <p class="hero-sub">A <strong>UI/UX Designer & Developer</strong> crafting seamless digital experiences — from concept to code.</p>
+  <p class="hero-sub">A <strong>Software Engineer & Full-Stack Developer</strong> building SaaS, desktop, and web products — from client business to production platform.</p>
   <div class="hero-btns">
     <a href="#projects" class="btn btn-p">⬡ View Projects</a>
     <a href="https://github.com/nishant4sep" target="_blank" class="btn btn-g">GH GitHub</a>
-    <a href="https://behance.com/nishantpadha" target="_blank" class="btn btn-g">Bē Behance</a>
+    <a href="/Nishant_Padha_Resume_2026.pdf" target="_blank" class="btn btn-g">↓ Resume</a>
   </div>
   <div class="term">
     <div class="term-bar">
@@ -214,9 +215,10 @@ section.visible{opacity:1;transform:translateY(0)}
     <div class="term-body">
       <div><span class="tc">// quick intro</span></div>
       <div><span class="tk">const</span> nishant = {</div>
-      <div>&nbsp;&nbsp;<span class="tk">name</span>:&nbsp;&nbsp;&nbsp;<span class="ts">"Nishant Padha"</span>,</div>
-      <div>&nbsp;&nbsp;<span class="tk">role</span>:&nbsp;&nbsp;&nbsp;<span class="ts">"Designer &amp; Developer"</span>,</div>
-      <div>&nbsp;&nbsp;<span class="tk">stack</span>:&nbsp;&nbsp;[<span class="ts">"Figma"</span>, <span class="ts">"React"</span>, <span class="ts">"Node.js"</span>, <span class="ts">"Python"</span>],</div>
+      <div>&nbsp;&nbsp;<span class="tk">name</span>:&nbsp;&nbsp;&nbsp;&nbsp;<span class="ts">"Nishant Padha"</span>,</div>
+      <div>&nbsp;&nbsp;<span class="tk">role</span>:&nbsp;&nbsp;&nbsp;&nbsp;<span class="ts">"Full-Stack Developer"</span>,</div>
+      <div>&nbsp;&nbsp;<span class="tk">building</span>:&nbsp;<span class="ts">"NYX Digital"</span>,</div>
+      <div>&nbsp;&nbsp;<span class="tk">stack</span>:&nbsp;&nbsp;&nbsp;[<span class="ts">"React"</span>, <span class="ts">"Node.js"</span>, <span class="ts">"Electron"</span>, <span class="ts">"PostgreSQL"</span>],</div>
       <div>&nbsp;&nbsp;<span class="tk">openTo</span>:&nbsp;<span class="tv">true</span>,</div>
       <div>&nbsp;&nbsp;<span class="tk">github</span>:&nbsp;<span class="ts">"github.com/nishant4sep"</span></div>
       <div>};</div>
@@ -229,24 +231,25 @@ section.visible{opacity:1;transform:translateY(0)}
   <div class="about-grid">
     <div class="ac full">
       <h4>Bio</h4>
-      <p>I'm a designer and developer with a strong eye for aesthetics and a passion for building things that work beautifully. I operate at the intersection of design and engineering — comfortable in Figma as I am writing production code.<br/><br/>Beyond the screen, I'm a visual storyteller — my photography and creative work on Behance and Instagram feed directly back into how I think about interfaces, layouts, and user experience.</p>
-    </div>
-    <div class="ac">
-      <h4>Design</h4>
-      <div class="skills">
-        <span class="sk p">UI/UX Design</span><span class="sk p">Figma</span>
-        <span class="sk p">Prototyping</span><span class="sk p">Wireframing</span>
-        <span class="sk p">Branding</span><span class="sk p">Motion</span>
-        <span class="sk p">Art Direction</span><span class="sk p">Photography</span>
-      </div>
+      <p>I'm a full-stack developer and founder of NYX Digital, a studio building web, SaaS, and desktop products for real clients. My biggest build is NYX SYS — a desktop-first business management platform currently running for a live salon client, covering everything from billing and inventory to staff management and booking.<br/><br/>I started out in graphic design and video editing before moving into engineering, which still shapes how I think about product — not just "does it work" but "does it feel right." Currently sharpening DSA and system design while finishing my B.Tech in Computer Science.</p>
     </div>
     <div class="ac">
       <h4>Development</h4>
       <div class="skills">
-        <span class="sk">React</span><span class="sk">JavaScript</span>
-        <span class="sk">TypeScript</span><span class="sk">HTML/CSS</span>
-        <span class="sk g">Node.js</span><span class="sk g">Python</span>
-        <span class="sk g">REST APIs</span><span class="sk o">Git</span>
+        <span class="sk">React</span><span class="sk">Next.js</span>
+        <span class="sk">TypeScript</span><span class="sk">Electron</span>
+        <span class="sk g">Node.js</span><span class="sk g">Express</span>
+        <span class="sk g">PostgreSQL</span><span class="sk g">SQLite</span>
+        <span class="sk o">REST APIs</span><span class="sk o">Git</span>
+      </div>
+    </div>
+    <div class="ac">
+      <h4>Design & Security</h4>
+      <div class="skills">
+        <span class="sk p">Figma</span><span class="sk p">UI/UX</span>
+        <span class="sk p">Photoshop</span><span class="sk p">Premiere Pro</span>
+        <span class="sk">Linux</span><span class="sk">Nmap</span>
+        <span class="sk">Recon &amp; Enumeration</span>
       </div>
     </div>
   </div>
@@ -256,27 +259,35 @@ section.visible{opacity:1;transform:translateY(0)}
   <div class="stitle" data-i="◈">Experience &amp; Education</div>
   <div class="ei">
     <div class="ei-head">
-      <div><div class="ei-role">UI/UX Designer & Front-End Developer</div><div class="ei-co">Freelance · Remote</div></div>
-      <div class="ei-per">2023 – Present</div>
+      <div><div class="ei-role">Founder &amp; Full-Stack Developer</div><div class="ei-co">NYX Digital</div></div>
+      <div class="ei-per">2026 – Present</div>
     </div>
-    <p class="ei-desc">Designing and developing web products end-to-end — from user research and wireframes to production code. Building personal projects and an open creative portfolio.</p>
-    <div class="ei-tags"><span class="et">Figma</span><span class="et">React</span><span class="et">Node.js</span><span class="et">UI/UX</span><span class="et">Branding</span></div>
+    <p class="ei-desc">Founded NYX Digital as a digitization agency doing business websites, booking systems, WhatsApp integrations, and SaaS products for local clients. Designed and built NYX SYS from scratch — a desktop-first business management platform, currently deployed for a live salon client.</p>
+    <div class="ei-tags"><span class="et">React</span><span class="et">Electron</span><span class="et">Node.js</span><span class="et">PostgreSQL</span><span class="et">Product</span></div>
   </div>
   <div class="ei">
     <div class="ei-head">
-      <div><div class="ei-role">B.Tech — Computer Science & Engineering</div><div class="ei-co">Undergraduate Degree</div></div>
-      <div class="ei-per">2021 – 2025</div>
+      <div><div class="ei-role">Cybersecurity Intern</div><div class="ei-co">Cyber Defence Intelligence, Chandigarh</div></div>
+      <div class="ei-per">Jul 2025 · 45 days</div>
     </div>
-    <p class="ei-desc">Core CS foundations — data structures, algorithms, software engineering, OS, and networks. Explored design and frontend development alongside formal curriculum.</p>
-    <div class="ei-tags"><span class="et">DSA</span><span class="et">Software Eng.</span><span class="et">Python</span><span class="et">C/C++</span><span class="et">Databases</span></div>
+    <p class="ei-desc">Hands-on internship doing network reconnaissance, enumeration, and vulnerability scanning on Linux — Nmap, Netdiscover, John the Ripper, SEToolkit.</p>
+    <div class="ei-tags"><span class="et">Linux</span><span class="et">Nmap</span><span class="et">Recon</span></div>
   </div>
   <div class="ei">
     <div class="ei-head">
-      <div><div class="ei-role">Visual Creator</div><div class="ei-co">Behance · Instagram · Photography</div></div>
-      <div class="ei-per">Ongoing</div>
+      <div><div class="ei-role">Cybersecurity Intern</div><div class="ei-co">Unified Mentor</div></div>
+      <div class="ei-per">Apr – Jul 2026</div>
     </div>
-    <p class="ei-desc">Capturing and creating visual stories through photography and digital design. A creative portfolio that directly informs interface and product design work.</p>
-    <div class="ei-tags"><span class="et">Photography</span><span class="et">Art Direction</span><span class="et">Behance</span><span class="et">Content</span></div>
+    <p class="ei-desc">Built the Windows Registry Monitor project — tracks and logs registry changes for security monitoring purposes — alongside additional cybersecurity research tasks.</p>
+    <div class="ei-tags"><span class="et">Python</span><span class="et">Windows</span><span class="et">Security</span></div>
+  </div>
+  <div class="ei">
+    <div class="ei-head">
+      <div><div class="ei-role">B.Tech — Computer Science &amp; Engineering</div><div class="ei-co">UIET Kathua</div></div>
+      <div class="ei-per">Aug 2023 – Aug 2027</div>
+    </div>
+    <p class="ei-desc">Core CS foundations — data structures, algorithms, software engineering, OS, and networks. Most of what I use day-to-day I picked up outside class, through personal projects, freelancing, and internships.</p>
+    <div class="ei-tags"><span class="et">DSA</span><span class="et">Software Eng.</span><span class="et">Python</span><span class="et">Databases</span></div>
   </div>
 </section>
 
@@ -284,14 +295,80 @@ section.visible{opacity:1;transform:translateY(0)}
   <div class="stitle" data-i="⬡">Projects</div>
   <div class="ptabs">
     <button class="tab active" data-f="all">All</button>
+    <button class="tab" data-f="featured">Featured</button>
     <button class="tab" data-f="JavaScript">JavaScript</button>
     <button class="tab" data-f="Python">Python</button>
-    <button class="tab" data-f="HTML">HTML/CSS</button>
     <button class="tab" data-f="TypeScript">TypeScript</button>
-    <button class="tab" data-f="other">Other</button>
   </div>
   <div class="pgrid" id="pgrid">
-    <div class="pload" id="pload">Fetching repos from GitHub<span id="ldots"></span></div>
+
+    <div class="pc" data-lang="TypeScript" data-featured="1">
+      <div class="pc-head"><span class="pc-icon">⬡</span>
+        <div class="pc-links"><span class="pc-badge">Private client work</span></div>
+      </div>
+      <div class="pc-name">NYX SYS — Desktop Business Management Platform</div>
+      <div class="pc-desc">Desktop-first, offline-capable platform for running a small business day-to-day: owner &amp; staff dashboards, RBAC, billing, inventory, appointments. Includes Northern Bloom, the client-facing booking site — shipped in 2–3 weeks. Monorepo, live for a real salon client.</div>
+      <div class="pc-foot">
+        <span class="pc-lang"><span class="ld" style="background:#3178c6"></span>Electron · React · SQLite</span>
+      </div>
+    </div>
+
+    <div class="pc" data-lang="TypeScript" data-featured="1">
+      <div class="pc-head"><span class="pc-icon">⬡</span>
+        <div class="pc-links"><span class="pc-badge">Private client work</span></div>
+      </div>
+      <div class="pc-name">Salon Management SaaS</div>
+      <div class="pc-desc">The SaaS layer on top of NYX SYS — counter billing, staff commission tracking, QR payments, WhatsApp receipts, peak-hour analytics, developer-level admin access. Recurring subscription model in the works.</div>
+      <div class="pc-foot">
+        <span class="pc-lang"><span class="ld" style="background:#3178c6"></span>Node.js · PostgreSQL</span>
+      </div>
+    </div>
+
+    <div class="pc" data-lang="Python" data-featured="1">
+      <div class="pc-head"><span class="pc-icon">⬡</span>
+        <div class="pc-links"><a href="https://gamolyzer.in" target="_blank" class="pcl">Live ↗</a></div>
+      </div>
+      <div class="pc-name">Gamolyzer</div>
+      <div class="pc-desc">Free game aggregator + Telegram bot that notifies users about free game giveaways, pulled from public APIs. Built for the Indian gaming audience.</div>
+      <div class="pc-foot">
+        <span class="pc-lang"><span class="ld" style="background:#3572A5"></span>Python · Supabase</span>
+      </div>
+    </div>
+
+    <div class="pc" data-lang="Python" data-featured="1">
+      <div class="pc-head"><span class="pc-icon">⬡</span>
+        <div class="pc-links"><a href="https://github.com/nishant4sep/windows-registry-monitor" target="_blank" class="pcl">Code ↗</a></div>
+      </div>
+      <div class="pc-name">Windows Registry Monitor</div>
+      <div class="pc-desc">Tracks and logs changes to the Windows registry for security monitoring. Built during the Unified Mentor internship, now a standalone project on GitHub.</div>
+      <div class="pc-foot">
+        <span class="pc-lang"><span class="ld" style="background:#3572A5"></span>Python</span>
+      </div>
+    </div>
+
+    <div class="pc" data-lang="Python" data-featured="1">
+      <div class="pc-head"><span class="pc-icon">⬡</span>
+        <div class="pc-links"><span class="pc-badge">Learning project</span></div>
+      </div>
+      <div class="pc-name">Shadow Recon</div>
+      <div class="pc-desc">A recon toolkit built for learning purposes — host discovery, scanning, and credential auditing on Linux.</div>
+      <div class="pc-foot">
+        <span class="pc-lang"><span class="ld" style="background:#3572A5"></span>Python · Linux</span>
+      </div>
+    </div>
+
+    <div class="pc" data-lang="JavaScript" data-featured="1">
+      <div class="pc-head"><span class="pc-icon">⬡</span>
+        <div class="pc-links"><span class="pc-badge">Private</span></div>
+      </div>
+      <div class="pc-name">CodeDrop — Chrome Extension</div>
+      <div class="pc-desc">Reads code blocks straight out of AI chat interfaces and writes them to disk in the right file structure — built to stop manually copy-pasting AI-generated code.</div>
+      <div class="pc-foot">
+        <span class="pc-lang"><span class="ld" style="background:#f1e05a"></span>JavaScript · Chrome APIs</span>
+      </div>
+    </div>
+
+    <div class="pload" id="pload">Fetching more repos from GitHub<span id="ldots"></span></div>
   </div>
   <div class="syncbar" id="sbar" style="display:none">
     <span class="spulse"></span><span id="stxt"></span>
@@ -300,7 +377,7 @@ section.visible{opacity:1;transform:translateY(0)}
 
 <section id="contact">
   <div class="stitle" data-i="◎">Contact</div>
-  <p style="font-size:.82rem;color:var(--text2);margin-bottom:1.25rem;max-width:440px">Open to freelance work, full-time roles, and interesting collaborations.</p>
+  <p style="font-size:.82rem;color:var(--text2);margin-bottom:1.25rem;max-width:440px">Open to full-time Software / Product Engineering roles, remote-first.</p>
   <div class="cgrid">
     <a href="https://www.linkedin.com/in/nishantpadha/" target="_blank" class="cc">
       <div class="cc-icon">in</div>
@@ -317,9 +394,9 @@ section.visible{opacity:1;transform:translateY(0)}
       <div><div class="cc-label">Behance</div><div class="cc-val">nishantpadha</div></div>
       <span class="cc-arr">↗</span>
     </a>
-    <a href="https://www.instagram.com/nishantpadha/" target="_blank" class="cc">
-      <div class="cc-icon">ig</div>
-      <div><div class="cc-label">Instagram</div><div class="cc-val">@nishantpadha</div></div>
+    <a href="mailto:nishantpadha4sep@gmail.com" class="cc">
+      <div class="cc-icon">@</div>
+      <div><div class="cc-label">Email</div><div class="cc-val">nishantpadha4sep</div></div>
       <span class="cc-arr">↗</span>
     </a>
   </div>
@@ -330,7 +407,7 @@ section.visible{opacity:1;transform:translateY(0)}
 
 <script>
 // typing
-const phrases=['designer.','developer.','creator.','nishant.'];
+const phrases=['engineer.','builder.','founder.','nishant.'];
 let pi=0,ci=0,del=false;
 const tel=document.getElementById('typed');
 function type(){
@@ -358,26 +435,39 @@ window.addEventListener('scroll',()=>{
   navAs.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+cur));
 },{passive:true});
 
-// GitHub
+// GitHub — appended below the curated/featured cards above.
+// Excludes repos already shown as featured cards, plus any marked non-public-facing.
 const COLORS={JavaScript:'#f1e05a',TypeScript:'#3178c6',Python:'#3572A5',HTML:'#e34c26',CSS:'#563d7c',Vue:'#41b883','C++':'#f34b7d',Java:'#b07219',Rust:'#dea584',Go:'#00ADD8',Shell:'#89e051','Jupyter Notebook':'#DA5B0B',C:'#555555',Ruby:'#701516'};
+const EXCLUDE_REPOS=['sentinel-edr','cloudy','windows-registry-monitor','nishant4sep']; // sentinel-edr & cloudy retired; registry-monitor already featured above
+const EXCLUDE_KEYWORDS=['blogger','template'];
 
 async function loadGH(){
   try{
-    const r=await fetch('https://api.github.com/users/nishant4sep/repos?sort=updated&per_page=20&type=public');
+    const r=await fetch('https://api.github.com/users/nishant4sep/repos?sort=updated&per_page=30&type=public');
     if(!r.ok)throw 0;
     const repos=await r.json();
     renderRepos(repos);
   }catch{
-    document.getElementById('pload').innerHTML='Could not load repos. <a href="https://github.com/nishant4sep" target="_blank" style="color:var(--blue)">View on GitHub ↗</a>';
+    document.getElementById('pload').innerHTML='Could not load more repos. <a href="https://github.com/nishant4sep" target="_blank" style="color:var(--blue)">View on GitHub ↗</a>';
   }
 }
 
 function renderRepos(repos){
   const grid=document.getElementById('pgrid');
-  const filtered=repos.filter(r=>!r.fork);
+  const filtered=repos.filter(r=>{
+    if(r.fork) return false;
+    const name=r.name.toLowerCase();
+    if(EXCLUDE_REPOS.includes(name)) return false;
+    if(EXCLUDE_KEYWORDS.some(k=>name.includes(k))) return false;
+    return true;
+  });
   document.getElementById('pload').remove();
-  if(!filtered.length){grid.innerHTML='<div class="pload">No public repos yet. <a href="https://github.com/nishant4sep" target="_blank" style="color:var(--blue)">Follow ↗</a></div>';return;}
-  filtered.forEach((r,i)=>{
+  if(!filtered.length){
+    document.getElementById('sbar').style.display='flex';
+    document.getElementById('stxt').textContent=`Synced · github.com/nishant4sep`;
+    return;
+  }
+  filtered.forEach((r)=>{
     const lang=r.language||'';
     const col=COLORS[lang]||'#8b949e';
     const c=document.createElement('div');
@@ -398,12 +488,12 @@ function renderRepos(repos){
     grid.appendChild(c);
   });
   document.getElementById('sbar').style.display='flex';
-  document.getElementById('stxt').textContent=`Synced · ${filtered.length} repos · github.com/nishant4sep`;
+  document.getElementById('stxt').textContent=`Synced · ${filtered.length} more repos · github.com/nishant4sep`;
 }
 loadGH();
 
 // filter
-const main4=['JavaScript','Python','HTML','TypeScript'];
+const main3=['JavaScript','Python','TypeScript'];
 document.querySelectorAll('.tab').forEach(btn=>{
   btn.addEventListener('click',()=>{
     document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
@@ -411,7 +501,10 @@ document.querySelectorAll('.tab').forEach(btn=>{
     const f=btn.dataset.f;
     document.querySelectorAll('.pc').forEach(c=>{
       const l=c.dataset.lang;
-      const show=f==='all'||(f==='other'?!main4.includes(l):(f==='HTML'?l==='HTML'||l==='CSS':l===f));
+      let show;
+      if(f==='all') show=true;
+      else if(f==='featured') show=c.dataset.featured==='1';
+      else show=(l===f);
       c.classList.toggle('h',!show);
     });
   });
